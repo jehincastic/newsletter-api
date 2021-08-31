@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "7ca79ff4-ffaf-426b-b780-64f1f1db2a96",
+		"name": "News Letter Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Castic\",\r\n  \"lastName\": \"Jehin\",\r\n  \"email\": \"jehincastic@gmail.com\",\r\n  \"age\": 23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/new",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csv_file",
+							"type": "file",
+							"src": "./sample_data.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/newsletter/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"newsletter",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:4000/api/v1"
+		}
+	]
+}

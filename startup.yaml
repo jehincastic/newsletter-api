@@ -1,0 +1,11 @@
+apps:
+  - script: dist/index.js
+    name: app
+  - script: dist/rabbitMQ/consumers/mailConsumer/worker.js
+    name: email_queue
+    instances: max
+    exec_mode: cluster
+  - script: dist/rabbitMQ/consumer/mailConsumer/worker.js
+    name: tracking_queue
+    instances: max
+    exec_mode: cluster

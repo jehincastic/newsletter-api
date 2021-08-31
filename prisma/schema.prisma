@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            Int           @id @default(autoincrement())
+  firstName    String
+  lastName     String
+  email         String        @unique
+  age           Int
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @default(now())
+  @@map(name: "users")
+}
+
+model Logs {
+  id            Int           @id @default(autoincrement())
+  mail          String
+  newsletter    String
+  status        Status
+  messageId     String
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @default(now())
+  @@map(name: "logs")
+}
+
+enum Status {
+  SUCCESS
+  FAILED
+}

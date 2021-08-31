@@ -30,16 +30,16 @@ foo@bar:~$ npm i -g pm2 (or) yarn global add pm2
 *Start the server*
   * Using PM2
   ```console
-  pm2 start startup.yaml
+  foo@bar:~$ pm2 start startup.yaml
   ```
   * Other Method
     * To start the server and publisher 
     ```console
-    npm run start (or) yarn start
+    foo@bar:~$ npm run start (or) yarn start
     ```
     * To start the consumer 
     ```console
-    npm run email_queue (or) yarn email_queue
+    foo@bar:~$ npm run email_queue (or) yarn email_queue
     ```
 
 *Note*

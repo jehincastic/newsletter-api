@@ -49,6 +49,6 @@ foo@bar:~$ npm i -g pm2 (or) yarn global add pm2
     * {{name}} will be replaced by the first name and last name.
     * {{age}} will be replaced by the age provided. 
 
-[env]: https://github.com/jehincastic/newsletter-api/.env.sample
-[postman]: https://github.com/jehincastic/newsletter-api/sample_files/postman_collection.json
-[csv]: https://github.com/jehincastic/newsletter-api/sample_files/sample_files/sample_data.csv
+[env]: https://github.com/jehincastic/newsletter-api/blob/master/.env.sample
+[postman]: https://github.com/jehincastic/newsletter-api/blob/master/sample_files/postman_collection.json
+[csv]: https://github.com/jehincastic/newsletter-api/blob/master/sample_files/sample_data.csv
